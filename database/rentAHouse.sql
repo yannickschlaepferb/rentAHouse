@@ -1,5 +1,5 @@
-CREATE DATABASE Chatapp IF NOT EXISTS;
-USE Chatapp;
+CREATE DATABASE rentahouse IF NOT EXISTS;
+USE rentahouse;
 
 CREATE TABLE users (
     id integer PRIMARY KEY AUTO_INCREMENT,
@@ -13,4 +13,3 @@ INSERT INTO users (username, password)
 VALUES 
 ('bob', '1234'),
 ('john', '1122');
-
