@@ -12,7 +12,7 @@ function houses() {
         Choose the House You Want to Rent
       </h1>
       <div className="grid grid-cols-2 grid-rows-2 gap-3 w-screen h-screen">
-        <img src="./images/house1.png" />
+        <Link to="/house1"><img src="./images/house1.png" /></Link>
         <img src="./images/house2.png" />
         <img src="./images/house3.png" />
         <img src="./images/house4.png" />
