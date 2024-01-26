@@ -13,9 +13,9 @@ function houses() {
       </h1>
       <div className="grid grid-cols-2 grid-rows-2 gap-3 w-screen h-screen">
         <Link to="/house1"><img src="./images/house1.png" /></Link>
-        <img src="./images/house2.png" />
-        <img src="./images/house3.png" />
-        <img src="./images/house4.png" />
+        <Link to="/house2"><img src="./images/house2.png" /></Link>
+        <Link to="/house3"><img src="./images/house3.png" /></Link>
+        <Link to="/house4"><img src="./images/house4.png" /></Link>
       </div>
     </div>
   );
