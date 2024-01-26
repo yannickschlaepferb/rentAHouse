@@ -15,7 +15,7 @@ app.listen(3001, () => {
 });
 
 app.use(cors({
-  origin : ["http://localhost:3000"],
+  origin : ["http://localhost:3000","*"],
   methods : ["GET", "POST", "DELETE"],
   credentials: true,
 }))
@@ -126,8 +126,11 @@ pool.execute('SELECT * FROM users WHERE username = ?', [username], (error, resul
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY)
 
 const storeItems = new Map([
-  [1, { priceInCents: 10000, name: "Learn React Today" }],
-  [2, { priceInCents: 20000, name: "Learn CSS Today" }],
+  [1, { priceInCents: 10000, name: "House1" }],
+  [2, { priceInCents: 20000, name: "House2" }],
+  [3, { priceInCents: 20000, name: "House3" }],
+  [4, { priceInCents: 20000, name: "House4" }],
+
 ])
 
 app.post("/create-checkout-session", async (req, res) => {
@@ -148,8 +151,8 @@ app.post("/create-checkout-session", async (req, res) => {
           quantity: item.quantity,
         }
       }),
-      success_url: `http://127.0.0.1/success.html`,
-      cancel_url: `http://127.0.0.1/cancel.html`,
+      success_url: `http://localhost:3000/`,
+      cancel_url: `http://localhost:3000/`,
     })
     res.json({ url: session.url })
   } catch (e) {

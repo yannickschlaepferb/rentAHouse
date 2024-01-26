@@ -8,6 +8,7 @@ import House2 from "./pages/house2.jsx";
 import House3 from "./pages/house3.jsx";
 import House4 from "./pages/house4.jsx";
 import Impressum from "./pages/impressum.jsx";
+import Test from "./pages/test.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/house3" element={<House3 />} />
             <Route path="/house4" element={<House4 />} />
             <Route path="/impressum" element={<Impressum />} />
+            <Route path="/test" element={<Test />} />
           </Routes>
         </BrowserRouter>
     </div>
