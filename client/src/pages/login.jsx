@@ -22,7 +22,7 @@ function Login() {
 
       if (response.data.success) {
         console.log("Login successful:", response.data);
-        //navigate(`/room/${username}`);
+        navigate("/houses");
       } else {
         console.error("Invalid username or password");
       }
