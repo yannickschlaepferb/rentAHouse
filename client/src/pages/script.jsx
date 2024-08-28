@@ -42,7 +42,7 @@ export default function Script() {
           width: "200px", // added width
         }}
       >
-        Pay
+        Pay for a week
       </button>
     </div>
   );
